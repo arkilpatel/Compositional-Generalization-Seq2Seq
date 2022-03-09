@@ -5,11 +5,12 @@
 
 <p align="center">
   <a href="https://www.2022.aclweb.org/"><img src="https://img.shields.io/badge/ACL-2022-blueviolet"></a>
-  <a href="https://arxiv.org/abs/2103.07191"><img src="http://img.shields.io/badge/Paper-PDF-red.svg"></a>
+  <a href="https://openreview.net/pdf?id=7lJpG58T5qy"><img src="http://img.shields.io/badge/Paper-PDF-red.svg"></a>
   <a href="https://github.com/arkilpatel/Compositional-Generalization-Seq2Seq/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green">
   </a>
 </p>
+
 
 <p style="text-align: justify;">
 Recently, there has been an increased interest in evaluating whether neural models are able to generalize compositionally. <a href="https://arxiv.org/abs/1711.00350">Previous work</a> had shown that seq2seq models such as LSTMs lack the inductive biases required for compositional generalization. We show that by modifying the training data distributions, neural sequence models such as LSTMs and Transformers achieve near perfect accuracies on compositional generalization benchmarks such as <a href="https://arxiv.org/abs/1711.00350">SCAN</a> and <a href="https://arxiv.org/abs/1901.04587">Colors</a>.
