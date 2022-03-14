@@ -87,14 +87,22 @@ We work with the following datasets:
 
 #### Usage:
 
-The set of command line arguments available can be seen in the respective `args.py` file. Here, we illustrate running a Transformer on the SCAN add_jump dataset. Follow the same methodology for running any experiment over any model.
+The set of command line arguments available can be seen in the respective `args.py` file. Here, we illustrate running a Transformer on the SCAN add_jump dataset in which the train set was modified to include 100 extra primitives. Follow the same methodology for running any experiment over any model.
 
-##### Running Transformer Model on SCAN add_jump
+##### Training Transformer model on SCAN add_jump_100_prims_controlled train set
 
 at `Compositional-Generalization-Seq2Seq/code/transformer:`
 
 ```shell
-$	python -m src.main -mode train -pretrained_model_name none -finetune_data_voc none -dataset add_jump -epochs 150 -no-save_model -no-show_train_acc -embedding random -no-freeze_emb -no-freeze_transformer -d_model 128 -d_ff 256 -decoder_layers 3 -encoder_layers 3 -heads 2 -batch_size 64 -lr 0.0005 -emb_lr 0.0005 -dropout 0.1 -run_name run_add_jump_transformer -gpu 0
+$	python -m src.main -mode train -project_name test_runs -model_selector_set val -pretrained_model_name none -finetune_data_voc none -dev_set -no-test_set -no-gen_set -dataset add_jump_100_prims_controlled -dev_always -no-test_always -no-gen_always -epochs 150 -save_model -no-show_train_acc -embedding random -no-freeze_emb -no-freeze_emb2 -no-freeze_transformer_encoder -no-freeze_transformer_decoder -no-freeze_fc -d_model 64 -d_ff 512 -decoder_layers 3 -encoder_layers 3 -heads 2 -batch_size 64 -lr 0.0005 -emb_lr 0.0005 -dropout 0.1 -run_name RUN-train_try -gpu 1
+```
+
+##### Testing the trained Transformer model on SCAN add_jump_100_prims_controlled test set
+
+at `Compositional-Generalization-Seq2Seq/code/transformer:`
+
+```shell
+$	python -m src.main -mode test -project_name test_runs -pretrained_model_name RUN-train_try -finetune_data_voc none -no-dev_set -no-test_set -gen_set -dataset add_jump_100_prims_controlled_10_prims_test -batch_size 1024 -run_name RUN-test_try -gpu 1
 ```
 
 #### Citation

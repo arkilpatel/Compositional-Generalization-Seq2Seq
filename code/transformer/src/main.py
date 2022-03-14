@@ -1,5 +1,5 @@
-# python -m src.main -no-debug -mode train -gpu 1 -dropout 0.1 -heads 4 -encoder_layers 1 -decoder_layers 1 -d_model 768 -d_ff 256 -lr 0.0001 -emb_lr 1e-5 -batch_size 32 -epochs 70 -embedding roberta -emb_name roberta-base -mawps_vocab -dataset mawps_fold0 -run_name mawps_try1
-# python -m src.main -mode test -project_name test_runs -pretrained_model_name lol -finetune_data_voc none -no-dev_set -no-test_set -gen_set -dataset lol -batch_size 256 -run_name test__1 -gpu 1
+# python -m src.main -mode train -project_name test_runs -model_selector_set val -pretrained_model_name none -finetune_data_voc none -dev_set -no-test_set -no-gen_set -dataset add_jump_100_prims_controlled_10_prims_test -dev_always -no-test_always -no-gen_always -epochs 150 -save_model -no-show_train_acc -embedding random -no-freeze_emb -no-freeze_emb2 -no-freeze_transformer_encoder -no-freeze_transformer_decoder -no-freeze_fc -d_model 64 -d_ff 512 -decoder_layers 3 -encoder_layers 3 -heads 2 -batch_size 64 -lr 0.0005 -emb_lr 0.0005 -dropout 0.1 -run_name RUN-train_try -gpu 1
+# python -m src.main -mode test -project_name test_runs -pretrained_model_name RUN-train_try -finetune_data_voc none -no-dev_set -no-test_set -gen_set -dataset add_jump_100_prims_controlled_10_prims_test -batch_size 256 -run_name RUN-test_try -gpu 1
 import os
 import sys
 import math
@@ -28,7 +28,6 @@ global log_folder
 global model_folder
 global result_folder
 global data_path
-global board_path
 
 log_folder = 'logs'
 model_folder = 'models'

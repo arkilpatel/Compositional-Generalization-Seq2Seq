@@ -531,6 +531,9 @@ def train_model(model, train_dataloader, val_dataloader, test_dataloader, gen_da
 			if config.model_selector_set == 'val':
 				selector_flag = 1
 
+		if test_loss_epoch < min_test_loss:
+			min_test_loss = test_loss_epoch
+
 		if test_acc_epoch > max_test_acc:
 			max_test_acc = test_acc_epoch
 			if config.model_selector_set == 'test':
