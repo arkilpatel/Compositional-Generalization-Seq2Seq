@@ -110,7 +110,14 @@ $	python -m src.main -mode test -project_name test_runs -pretrained_model_name R
 If you use our data or code, please cite our work:
 
 ```
-Add ArXiV citation
+@misc{patel_revisiting,
+	title={Revisiting the Compositional Generalization Abilities of Neural Sequence Models}, 
+	author={Arkil Patel and Satwik Bhattamishra and Phil Blunsom and Navin Goyal},
+	year={2022},
+	eprint={2203.07402},
+	archivePrefix={arXiv},
+	primaryClass={cs.CL}
+}
 ```
 
 For any clarification, comments, or suggestions please contact [Arkil](http://arkilpatel.github.io/) or [Satwik](https://satwikb.com/).
