@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://www.2022.aclweb.org/"><img src="https://img.shields.io/badge/ACL-2022-blueviolet"></a>
-  <a href="https://openreview.net/pdf?id=7lJpG58T5qy"><img src="http://img.shields.io/badge/Paper-PDF-red.svg"></a>
+  <a href="[https://openreview.net/pdf?id=7lJpG58T5qy](https://aclanthology.org/2022.acl-short.46/)"><img src="http://img.shields.io/badge/Paper-PDF-red.svg"></a>
   <a href="https://github.com/arkilpatel/Compositional-Generalization-Seq2Seq/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green">
   </a>
